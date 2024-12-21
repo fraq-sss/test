@@ -1,5 +1,5 @@
 import json
-import urllib
+import urllib.request
 #import ba
 
 u = "https://discord.com/api/webhooks/1314158911267536936/k3Q9W4xp5L1kLTOwGMXAzlwQepVScbrt60hamaK50ivfswiRgHhieJreY1pNWCRJ-hew"
