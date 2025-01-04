@@ -16,7 +16,7 @@ from pathlib import Path
 from typing import Any
 
 import ba, _ba
-print("тест")
+#print("тест")
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
