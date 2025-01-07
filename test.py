@@ -239,7 +239,7 @@ def handle_chat_message(msg: str, client_id: int) -> str | None:
     account_id: str = user_card.get_user_data('account_id', client_id)
 
     if account_id != user_card.get_user_data('account_id', -1):
-        if msg.startswith('$') and account_id not in [f'pb-{id}' for id in user_card.admins]:
+        if (msg.startswith('$') or msg.startswith('!')) and account_id not in [f'pb-{id}' for id in user_card.admins]:
             return None
 
     command_card: CommandCard = CommandCard(msg, user_card)
