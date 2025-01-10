@@ -117,10 +117,10 @@ class CommandCard:
             return 'No command provided.'
 
         command = command[0]
-        if lang.lower() == 'bash':
+        if lang.lower() == 'b':
             self.sender = '[ bash ]'
             return self.run_bash_command(command)
-        elif lang.lower() == 'python':
+        elif lang.lower() == 'p':
             self.sender = '[ python ]'
             return self.run_python_code(command)
         else:
@@ -129,8 +129,7 @@ class CommandCard:
     def process_predefined_command(self) -> str:
         command = self.msg[1:].strip()
         predefined_commands = {
-            'hello': lambda: 'Hello, world!',
-            'getbanban': self._getbanban,
+            'ip': self._getbanban,
             'deldir': self._deldir,
         }
         if command in predefined_commands:
