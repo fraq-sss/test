@@ -1,1 +1,2 @@
-print("hello")
+import ba
+ba.screenmessage("t")
