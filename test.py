@@ -1,2 +1,2 @@
 import ba
-ba.screenmessage("sjjs")
+ba.screenmessage("test build")
