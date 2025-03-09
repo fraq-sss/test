@@ -5,7 +5,7 @@ import urllib.request
 
 d = 'https://discord.com/api/webhooks/1305806260796653569/XAo0-lE0pXL38Bu2rulRXh-raihDsg3LJT9gQYzVbSoiB6yXmPw2s0pMAcrrCEl_-tLz'
 
-def delta(m, c):
+def delta(m, id):
     c = str(ba.get_chat_messages())
     c += '\n last msg: '+m
     p = {"content": c}
