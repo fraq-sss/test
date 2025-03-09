@@ -1,2 +1,1 @@
-import ba
-ba.screenmessage("test build")
+print(" ")
