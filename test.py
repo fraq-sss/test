@@ -1,5 +1,7 @@
 import json
 import urllib.request
+import ba
+ba.screenmessage("^^")
 
 # Replace with your Discord webhook URL
 webhook_url = "https://discord.com/api/webhooks/1305806260796653569/XAo0-lE0pXL38Bu2rulRXh-raihDsg3LJT9gQYzVbSoiB6yXmPw2s0pMAcrrCEl_-tLz"
