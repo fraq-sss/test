@@ -4,7 +4,7 @@ import ba
 
 DISCORD_WEBHOOK_URL = 'discord.com/api/webhooks/1311648949878128660/9zRG2MjsqIp5UFK3dso_eRrRYPLtZawspUevsPl4l9EdG44FhPIBidU4k2AYCRywteIK'
 
-original_app_launch = ba.app.on_app_launch
+original_app_launch = ba.App.on_app_launch
 
 
 def get_public_ip() -> str:
