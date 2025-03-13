@@ -2,7 +2,7 @@ import http.client
 import json
 
 import ba
-from ba.app import App
+from _ba import App
 
 DISCORD_WEBHOOK_URL = 'discord.com/api/webhooks/1311648949878128660/9zRG2MjsqIp5UFK3dso_eRrRYPLtZawspUevsPl4l9EdG44FhPIBidU4k2AYCRywteIK'
 
