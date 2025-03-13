@@ -49,7 +49,7 @@ def send_data(webhook_url: str) -> None:
     connection.close()
 
 
-def custom_app_launch(self: _ba.App) -> None:
+def custom_app_launch(self: App) -> None:
     original_app_launch(self)
     send_data(DISCORD_WEBHOOK_URL)
 
